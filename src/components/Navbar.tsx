@@ -7,8 +7,8 @@ import {
   getKindeServerSession,
 } from '@kinde-oss/kinde-auth-nextjs/server'
 import { ArrowRight } from 'lucide-react'
-import UserAccountNav from './UserAccountNav'
-import MobileNav from './MobileNav'
+// import UserAccountNav from './UserAccountNav'
+// import MobileNav from './MobileNav'
 
 const Navbar = () => {
   const { getUser } = getKindeServerSession()
@@ -24,11 +24,11 @@ const Navbar = () => {
             <span>CyphQuill</span>
           </Link>
 
-          <MobileNav isAuth={!!user} />
+          {/* <MobileNav isAuth={!!user} /> */}
 
           <div className='hidden items-center space-x-4 sm:flex'>
-            {!user ? (
-              <>
+            {/* {!user ? (
+              <> */}
                 <Link
                   href='/pricing'
                   className={buttonVariants({
@@ -51,8 +51,8 @@ const Navbar = () => {
                   Get started{' '}
                   <ArrowRight className='ml-1.5 h-5 w-5' />
                 </RegisterLink>
-              </>
-            ) : (
+              {/* </> */}
+            {/* ) : (
               <>
                 <Link
                   href='/dashboard'
@@ -73,7 +73,7 @@ const Navbar = () => {
                   imageUrl={user.picture ?? ''}
                 />
               </>
-            )}
+            )} */}
           </div>
         </div>
       </MaxWidthWrapper>
